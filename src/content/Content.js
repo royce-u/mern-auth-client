@@ -13,13 +13,13 @@ const Content = props => {
     <div className="container">
       <Route exact path="/" component={Home} />
       <Route path="/login" render={
-        () => <Login user={props.user} updateUser={props.updateUser} />
+        () => <Login user={props.user} updateToken={props.updateToken}/>
       } />
       <Route path="/profile" render={
         () => <Profile user={props.user} />
       } />
       <Route path="/signup" render={
-        () => <Signup user={props.user} updateUser={props.updateUser} />
+        () => <Signup user={props.user} updateToken={props.updateToken} />
       } />
     </div>
   )
